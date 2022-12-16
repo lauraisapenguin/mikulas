@@ -45,6 +45,7 @@ aside img{
 #szovegben{
     float: right;
     margin-left: 5px;
+    max-width: 40%;
 }
 
 
@@ -56,4 +57,51 @@ article{
 
 footer{
     grid-area: footer;
+}
+
+
+
+ul{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    list-style: none;
+    background-color: red;
+    padding: 10px;
+    text-align: center;
+}
+
+
+li a{
+    color:white;
+    text-decoration: none;
+}
+
+
+footer, nav{
+    background-color: red;
+}
+
+
+footer{
+    text-align: center;
+    color: white;
+}
+
+
+@media all and(max-width:600px){
+    #wrapper{
+        width: 95%;
+        margin: 0 auto;
+        background-color: rgb(246, 239, 229);
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "header"
+        "nav"
+        "article"
+        "footer";
+    }
+    aside{
+        display: none;
+    }
 }
